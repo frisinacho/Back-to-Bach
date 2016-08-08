@@ -29,11 +29,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-Qa-60r">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ngQ-na-iRJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="CvI-nz-qmF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zlY-Mg-S2x"/>
+                                    <barButtonItem title="Stop" id="gXm-6k-pyp"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mvf-dc-RaU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="33H-q1-FYv"/>
                             <constraint firstItem="mvf-dc-RaU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7bE-Hb-UgN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8ZZ-Qa-60r" secondAttribute="bottom" id="Qlb-SK-dcy"/>
+                            <constraint firstItem="8ZZ-Qa-60r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Tb7-Gc-74V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ZZ-Qa-60r" secondAttribute="trailing" constant="-20" id="gWx-Ov-Jxr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mvf-dc-RaU" secondAttribute="trailing" constant="-20" id="vAp-ml-fqc"/>
                         </constraints>
                     </view>
