@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func play(sender: AnyObject) {
+    }
+    
+    @IBOutlet var volumeSlider: UISlider!
+    
+    @IBAction func adjustVolume(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

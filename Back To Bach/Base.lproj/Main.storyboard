@@ -25,7 +25,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Back To Bach" id="9bb-xT-Jqa">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="fZM-ox-bjt"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="fZM-ox-bjt">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="gwz-lu-Ao2"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -53,6 +57,9 @@
                                     <constraint firstAttribute="width" constant="205" id="Idq-dj-SPn"/>
                                     <constraint firstAttribute="height" constant="30" id="M37-e0-Q2B"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zvn-J5-BgC"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-gl-s8D">
                                 <rect key="frame" x="196" y="433" width="209" height="31"/>
@@ -78,6 +85,9 @@
                             <constraint firstItem="Rzl-2B-mYY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xtv-87-veR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="volumeSlider" destination="SDr-0T-efA" id="A0g-Gm-M50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
