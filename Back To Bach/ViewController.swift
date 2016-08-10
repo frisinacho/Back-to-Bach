@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet var volumeSlider: UISlider!
     
     @IBAction func adjustVolume(sender: AnyObject) {
+        
+        player.volume = volumeSlider.value
     }
     
     @IBOutlet var scrubSlider: UISlider!
