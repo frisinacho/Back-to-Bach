@@ -51,6 +51,11 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateScrubSlider() {
+        
+        scrubSlider.value = Float(player.currentTime)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +69,8 @@ class ViewController: UIViewController {
             
             // It didn't work!
         }
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.updateScrubSlider), userInfo: nil, repeats: true)
         
     }
 
