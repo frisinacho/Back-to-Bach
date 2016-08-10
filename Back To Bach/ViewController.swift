@@ -34,6 +34,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stop(sender: AnyObject) {
+        
+        player.pause()
+        
+        do {
+            
+            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bach", ofType: "mp3")!))
+            
+        } catch {
+            
+            // It didn't work!
+        }
     }
     
     override func viewDidLoad() {
