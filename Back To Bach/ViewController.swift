@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet var scrubSlider: UISlider!
     
     @IBAction func scrub(sender: AnyObject) {
+        
+        player.currentTime = NSTimeInterval(scrubSlider.value)
     }
     
     @IBAction func pause(sender: AnyObject) {
@@ -55,6 +57,8 @@ class ViewController: UIViewController {
         do {
             
             try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bach", ofType: "mp3")!))
+            
+            scrubSlider.maximumValue = Float(player.duration)
             
         } catch {
             
