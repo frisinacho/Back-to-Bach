@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pause(sender: AnyObject) {
+        
+        player.pause()
     }
     
     @IBAction func stop(sender: AnyObject) {
