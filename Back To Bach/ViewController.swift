@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player: AVAudioPlayer = AVAudioPlayer()
 
     @IBAction func play(sender: AnyObject) {
     }
@@ -31,7 +34,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        do {
+            
+            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bach", ofType: "mp3")!))
+            
+        } catch {
+            
+            // It didn't work!
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
