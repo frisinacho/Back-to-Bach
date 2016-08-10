@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer = AVAudioPlayer()
 
     @IBAction func play(sender: AnyObject) {
+        
+        player.play()
     }
     
     @IBOutlet var volumeSlider: UISlider!
